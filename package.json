@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "@tencent/tdesign-miniprogram-starter-retail": "file:",
+    "dayjs": "^1.9.3",
+    "tdesign-miniprogram": "^1.6.2",
+    "tslib": "^1.11.1"
+  },
+  "devDependencies": {
+    "colorette": "^2.0.20",
+    "commander": "^12.1.0"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/logs/logs",
+    "pages/index/test/index",
+    "pages/webview/webview"
+  ],
+  "darkmode": true,
+  "themeLocation": "theme.json",
+  "window": {
+    "navigationBarTitleText": "应风",
+    "visualEffectInBackground": "hidden",
+    "navigationBarBackgroundColor": "@navBgColor",
+    "navigationBarTextStyle": "@navTxtStyle",
+    "backgroundColor": "@bgColor",
+    "backgroundTextStyle": "@bgTxtStyle",
+    "backgroundColorTop": "@bgColorTop",
+    "backgroundColorBottom": "@bgColorBottom"
+  },
+  "tabBar": {
+    "color": "@tabFontColor",
+    "selectedColor": "@tabSelectedColor",
+    "backgroundColor": "@tabBgColor",
+    "borderStyle": "@tabBorderStyle",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/home/home"
+      },
+      {
+        "text": "日志",
+        "pagePath": "pages/logs/logs"
+      }
+    ]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "resizable": true,
+  "frameset": true
+}

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "首页",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "t-loading": "tdesign-miniprogram/loading/loading",
+    "t-avatar": "tdesign-miniprogram/avatar/avatar",
+    "t-icon": "tdesign-miniprogram/icon/icon",
+    "copy-reminder": "/components/copy-reminder/copy-reminder"
+  }
+}

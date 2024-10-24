@@ -1,0 +1,4 @@
+<view bind:tap="copy">
+    <slot></slot>
+</view>
+<t-dialog visible="{{visible}}" content="{{tip}}" confirm-btn="{{confirmText || confirmBtn}}" bind:confirm="onConfirm" cancel-btn="{{confirmText ? '取消' : ''}}" bind:cancel="closeDialog" />
