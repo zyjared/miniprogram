@@ -1,0 +1,10 @@
+<view style="display: {{show ? 'block' : 'none'}};" class="_loading-wrapper">
+	<zicon
+	 useBg="{{useBg}}"
+	 class="_loading"
+	 icon="{{icon}}"
+	 size="{{size}}"
+	 color="{{color}}"
+	/>
+</view>
+

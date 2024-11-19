@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "navigation-bar": "/components/navigation-bar/navigation-bar",
+    "zicon": "/components/zicon/zicon",
+    "loading": "/components/loading/loading",
+    "search": "/components/search/search",
+    "risen": "/components/search/risen/risen",
+    "risen-nav-search": "/components/search/risen-nav-search/risen-nav-search",
+    "navigation-search": "/components/navigation-search/navigation-search"
+  }
+}

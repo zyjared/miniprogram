@@ -1,0 +1,27 @@
+page {
+    background-color: var(--bg-bar);
+}
+
+.header {
+    padding: 20rpx;
+    background-color: var(--bg-bar);
+    border-bottom-left-radius: 20rpx;
+    border-bottom-right-radius: 20rpx;
+    box-shadow: var(--shadow-2);
+}
+
+.header__btns {
+    padding: 30rpx 0 0;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1rpx solid var(--bg);
+}
+
+.bottom-line {
+    text-align: center;
+    padding: 30rpx 0 env(safe-area-inset-bottom);
+}

@@ -1,0 +1,19 @@
+<navigation-search
+ title="组件 navigation-search"
+ model:value="{{searchValue}}"
+ bindconfirm="bindConfirm"
+ bindinput="bindInput"
+/>
+<scroll-view class="scroller safe-area" type="list" scroll-y>
+	<view class="detail">
+		<view class="item">
+			<text class="item__label">value</text>
+			<text class="item__value">{{searchValue ? searchValue : "[未输入]"}}</text>
+		</view>
+
+		<view class="item">
+			<text>该组件待重写，效果用于演示。考虑这样的效果是否有必要。普通搜索框使用 `components/search` 组件</text>
+		</view>
+	</view>
+</scroll-view>
+

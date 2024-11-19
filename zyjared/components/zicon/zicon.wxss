@@ -1,0 +1,35 @@
+.icon-wrapper {
+    /* 可能不支持 */
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.icon-mask,
+.icon-bg {
+    width: 100%;
+    height: 100%;
+}
+
+.icon-mask {
+    -moz-mask-repeat: no-repeat;
+    -moz-mask-size: cover;
+    -moz-mask-image: var(--icon);
+
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    -webkit-mask-image: var(--icon);
+
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    mask-image: var(--icon);
+
+    background-color: #888888;
+}
+
+.icon-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: var(--icon);
+}

@@ -1,0 +1,72 @@
+<view class="navigation-bar {{extClass}}">
+	<view class="navigation-bar__inner {{ios ? 'ios' : 'android'}}" style="color: {{color}}; background: {{background}}; {{displayStyle}}; {{innerPaddingRight}}; {{safeAreaTop}}">
+
+		<!-- 左侧按钮 -->
+		<view class='navigation-bar__left' style="{{leftWidth}}">
+			<block wx:if="{{back || homeButton}}">
+				<!-- 返回上一页 -->
+				<block wx:if="{{back}}">
+					<view class="navigation-bar__buttons navigation-bar__buttons_goback">
+						<view
+						 bindtap="back"
+						 class="navigation-bar__btn_goback_wrapper"
+						 hover-stay-time="100"
+						 aria-role="button"
+						 aria-label="返回"
+						>
+							<zicon
+							 class="navigation-bar__button navigation-bar__btn_goback"
+							 icon="arrow-back"
+							 size="{{18}}"
+							 color="{{color}}"
+							 useBg
+							/>
+						</view>
+					</view>
+				</block>
+				<!-- 返回首页 -->
+				<block wx:if="{{homeButton}}">
+					<view class="navigation-bar__buttons navigation-bar__buttons_home">
+						<view
+						 bindtap="home"
+						 class="navigation-bar__btn_home_wrapper"
+						 hover-class="active"
+						 aria-role="button"
+						 aria-label="首页"
+						>
+							<zicon
+							 class="navigation-bar__button navigation-bar__btn_goback"
+							 icon="home"
+							 size="{{20}}"
+							 color="{{color}}"
+							 useBg
+							/>
+						</view>
+					</view>
+				</block>
+			</block>
+			<block wx:else>
+				<slot name="left" />
+			</block>
+		</view>
+
+		<!-- 标题 -->
+		<view class='navigation-bar__center'>
+			<view wx:if="{{loading}}" class="navigation-bar__loading" aria-role="alert">
+				<loading icon="loading-sun" size="{{16}}" color="{{color}}" />
+			</view>
+			<block wx:if="{{title}}">
+				<text>{{title}}</text>
+			</block>
+			<block wx:else>
+				<slot name="center" />
+			</block>
+		</view>
+
+		<!-- 右侧留空 -->
+		<view class='navigation-bar__right'>
+			<slot name="right" />
+		</view>
+	</view>
+</view>
+

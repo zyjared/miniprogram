@@ -1,0 +1,125 @@
+.z-search {
+    --bg: #eee;
+    --font-size: 17px;
+    --line-height: 2;
+    --height: calc(var(--font-size) * var(--line-height));
+    --padding: calc(var(--font-size) * 0.5);
+
+    --i-search-size: 20px;
+    --i-close-size: 17px;
+
+    --input-padding-left: calc(var(--i-search-size) + var(--padding) * 1.8);
+    --input-padding-right: calc(var(--i-close-size) + var(--padding));
+}
+
+.z-search--default {
+    background-color: #fff;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+
+.z-search__wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* bar */
+
+.z-search__bar {
+    background-color: var(--bg);
+    border-radius: 5px;
+}
+
+.z-search__input {
+    width: 100%;
+    display: block;
+    height: var(--height);
+    line-height: var(--line-height);
+    box-sizing: border-box;
+    padding-left: var(--input-padding-left);
+    padding-right: var(--input-padding-right);
+}
+
+.z-search__i {
+    position: absolute;
+    width: var(--input-padding-left);
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.z-search__clear {
+    width: var(--input-padding-right);
+    left: unset;
+    right: 0;
+}
+
+.z-search__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.z-search__tip-text {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(0, -50%);
+    color: #999;
+}
+
+/* search 容器 */
+
+.z-search {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 100%;
+}
+
+.z-search__bar-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    overflow: hidden;
+}
+
+.z-search__bar {
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.z-search__cancel {
+    flex-shrink: 0;
+    margin-left: var(--padding);
+    height: var(--height);
+    line-height: var(--height);
+}
+
+/* placeholder */
+
+.z-search__placeholder {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: var(--height);
+    visibility: hidden;
+}
+
+.z-search__placeholder-bar {
+    flex: 1;
+}
+
+.z-search__placeholder-cancel {
+    flex-shrink: 0;
+    margin-left: var(--padding);
+}

@@ -1,0 +1,46 @@
+page {
+    --bg: #eee;
+    --bg-bar: #fff;
+
+    --color-1: #000;
+    --color-2: #3a3a3a;
+    --color-3: #5e5e5e;
+
+    --danger-1: #c0392b;
+    --danger-2: #e74c3c;
+    --danger-3: #e74c3c88;
+    --success-1: #27ae60;
+    --success-2: #2ecc71;
+    --success-3: #2ecc7188;
+    --warning-1: #f39c12;
+    --warning-2: #f1c40f;
+    --warning-3: #f1c40f88;
+
+    --shadow-1: 0 2rpx 3rpx #0000002e;
+    --shadow-2: 0 4rpx 8rpx #0000002e;
+    --shadow-3: 0 6rpx 16rpx #0000002e;
+
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.scroller {
+    flex: 1;
+    box-sizing: border-box;
+}
+
+.safe-area {
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200rpx 0;
+    box-sizing: border-box;
+}

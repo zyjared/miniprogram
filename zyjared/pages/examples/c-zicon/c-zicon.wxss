@@ -1,0 +1,81 @@
+.icon-scroller {
+    flex: 1;
+    background-color: var(--bg-bar);
+}
+
+.settings {
+    background-color: var(--bg-bar);
+    padding: 20rpx;
+    border-bottom-left-radius: 50rpx;
+    border-bottom-right-radius: 50rpx;
+    box-shadow: 0 4rpx 8rpx #0000002e;
+}
+
+.description {
+    color: var(--color-3);
+    display: block;
+    border-radius: 10rpx;
+    background-color: var(--warning-3);
+    padding: 30rpx;
+    margin: 20rpx;
+    box-shadow: var(--shadow-2);
+}
+
+.icons,
+.icon {
+    display: flex;
+    flex-direction: column;
+}
+
+.icons {
+    padding-top: 20rpx;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+
+.colors {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.color {
+    padding: 10rpx;
+    margin: 10rpx;
+}
+
+.color__bar {
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.color__active .color__bar {
+    border: 7rpx solid #ffffff88;
+    box-shadow: var(--shadow-1);
+}
+
+
+.icon {
+    flex-direction: row;
+    align-items: center;
+}
+
+.icon__image {
+    width: 100rpx;
+    height: 100rpx;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rpx;
+    margin-left: 30rpx;
+    box-shadow: var(--shadow-2);
+}
+
+.icon__title {
+    flex: 1;
+    padding: 66rpx 0;
+    border-bottom: 1rpx solid var(--bg);
+    margin-left: 30rpx;
+    color: var(--color-3);
+}

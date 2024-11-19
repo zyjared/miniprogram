@@ -1,0 +1,24 @@
+<!--pages/examples/device/device.wxml-->
+<navigation-bar title="示例-设备信息" />
+<scroll-view class="scroller" type="list" scroll-y>
+	<view class="safe-area infos" wx:if="{{infoLoaded}}">
+		<view
+		 wx:for="{{infoItems}}"
+		 wx:key="attr"
+		 wx:for-item="info"
+		 class="info {{info.error ? 'info-error' : ''}}"
+		>
+			<text class="info__title">{{info.title}}</text>
+			<view class="info__error" wx:if="{{info.error}}">
+				<view class="info__error__message" wx:for="{{info.messages}}" wx:key="index">{{item}}</view>
+			</view>
+			<view class="info__list">
+				<view wx:for="{{info.items}}" wx:key="attr" class="item">
+					<text class="item__title">{{item.title}}</text>
+					<text class="item__desc">{{item.desc}}</text>
+				</view>
+			</view>
+		</view>
+	</view>
+</scroll-view>
+

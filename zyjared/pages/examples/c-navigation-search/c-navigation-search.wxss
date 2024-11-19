@@ -1,0 +1,23 @@
+.item {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--bg-bar);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 10px 8px 0;
+}
+
+.item__label {
+    font-weight: bold;
+}
+
+.item__value {
+    max-width: 50%;
+    border-bottom: 1px solid var(--bg);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
+}

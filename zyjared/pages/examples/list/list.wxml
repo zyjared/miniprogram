@@ -1,0 +1,50 @@
+<navigation-bar title="示例-长列表" loading="{{loading}}" />
+<view class="header">
+	<view class="header__item">
+		<view>总数</view>
+		<slider
+		 min="50"
+		 max="1000"
+		 step="1"
+		 model:value="{{mockTotal}}"
+		 show-value
+		/>
+	</view>
+	<view class="header__item">
+		<view>请求延迟 ms</view>
+		<slider
+		 min="100"
+		 max="6000"
+		 step="1"
+		 model:value="{{mockDelay}}"
+		 show-value
+		/>
+	</view>
+	<view class="header__btns">
+		<button bindtap="initData" size="mini" type="primary">
+			重新载入
+		</button>
+	</view>
+</view>
+<scroll-view
+ class="scroller"
+ type="custom"
+ scroll-y
+ bindscrolltolower="handleBindscrolltolower"
+>
+	<list-builder list="{{list}}" child-height="{{itemHeight}}">
+		<view
+		 slot:item
+		 slot:index
+		 class="item"
+		 style="height: {{itemHeight}}px;"
+		>
+			<view>{{item.title}}</view>
+		</view>
+	</list-builder>
+	<view class="bottom-line">
+		<loading size="{{32}}" show="{{loading}}" />
+		<view style="display: {{noMore ? 'block' : 'none'}}">到底啦~</view>
+	</view>
+</scroll-view>
+

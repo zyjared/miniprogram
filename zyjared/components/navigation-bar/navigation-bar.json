@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "styleIsolation": "apply-shared",
+  "usingComponents": {
+    "zicon": "/components/zicon/zicon",
+    "loading": "/components/loading/loading"
+  }
+}

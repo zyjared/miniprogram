@@ -1,0 +1,13 @@
+<navigation-search title="测试" />
+<scroll-view
+ class="scroller"
+ type="custom"
+ scroll-y
+ style="background-color: #fff; padding: 10px;"
+>
+	<text>
+    测试
+</text>
+
+</scroll-view>
+

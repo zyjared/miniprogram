@@ -1,0 +1,139 @@
+page {
+    --main-radius: 30rpx;
+    --main-bg: #fff;
+    --main-fg: #000;
+    --bg: #06b6d4;
+    --fg: #fff;
+    --avatar-size: 80px;
+
+    --bar-height: 44px;
+    background-color: var(--main-bg);
+}
+
+.android {
+    --bar-height: 48px;
+}
+
+.scroller {
+    color: var(--fg);
+    background: linear-gradient(150deg, var(--bg) 0, #00000000 60%, #00000000 100%);
+}
+
+.placeholder {
+    height: env(safe-area-inset-top);
+}
+
+.header {
+    padding: env(safe-area-inset-top) 30px 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.header .avatar {
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    font-size: calc(var(--avatar-size) / 3);
+    border-radius: 50%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.header .avatar cover-image,
+.header .avatar view {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .avatar view {
+    border-radius: 50%;
+    border: 1px solid #FAFAFA;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+.header .info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+}
+
+.header .name {
+    font-size: 18px;
+    will-change: transform;
+}
+
+.header .ip {
+    font-size: 12px;
+}
+
+.detail {
+    padding: 15px 30px 20px;
+}
+
+.socials {
+    display: flex;
+    gap: 20rpx;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    margin-right: 16rpx;
+}
+
+.main {
+    height: calc(100vh - var(--bar-height) - env(safe-area-inset-top));
+    background-color: var(--main-bg);
+    color: var(--main-fg);
+    box-sizing: border-box;
+    padding: 30rpx 30rpx 0;
+    border-top-left-radius: var(--main-radius);
+    border-top-right-radius: var(--main-radius);
+}
+
+/* scrolled */
+
+.header {
+    transition: padding 0.3s linear, color 0.3s linear;
+}
+
+.header .avatar,
+.header .info {
+    transform-origin: left center;
+    transition: transform 0.3s linear;
+}
+
+.detail {
+    transition: opacity 0.5s linear, transform 0.3s linear;
+}
+
+.main {
+    transition: border-radius 0.3s linear;
+}
+
+.scrolled .header .avatar {
+    transform: scale(0.4) translateX(-25px);
+}
+
+.scrolled .header .info {
+    transform: translateX(-66px);
+}
+
+.scrolled .header {
+    height: var(--bar-height);
+    box-sizing: content-box;
+}
+
+.scrolled .header .ip {
+    display: none;
+}
+
+.scrolled .detail {
+    transition: none;
+    opacity: 0;
+    transform: translateY(100%);
+}

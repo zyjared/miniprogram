@@ -1,0 +1,47 @@
+<view class="z-search {{useDefaultStyle ? 'z-search--default' : ''}} {{focus ? 'z-search--focus' : ''}}">
+	<view class="z-search__wrapper">
+		<view class="z-search__bar-wrapper">
+			<view class="z-search__bar" mut-bind:tap="bindClick">
+				<view class="z-search__i z-search__tip">
+					<zicon
+					 class="z-search__icon"
+					 icon="search"
+					 size="{{20}}"
+					 useBg
+					/>
+					<view style="display: {{showPlaceholder ? 'block' : 'none'}}" class="z-search__tip-text">
+						{{placeholder}}
+					</view>
+				</view>
+				<view mut-bind:tap="bindClear" style="display: {{value ? 'block' : 'none'}}" class="z-search__i z-search__clear">
+					<zicon
+					 class="z-search__icon"
+					 icon="close"
+					 size="{{17}}"
+					 useBg
+					/>
+				</view>
+				<input
+				 class="z-search__input"
+				 model:value="{{value}}"
+				 focus="{{focus}}"
+				 confirm-type="search"
+				 type="text"
+				 hold-keyboard
+				 bindinput="bindInput"
+				 bind:selectionchange="bindSelectionChange"
+				 worklet:onkeyboardheightchange="bindKeyboardHeightChange"
+				/>
+
+			</view>
+			<view class="z-search__cancel" mut-bind:tap="bindCancel">
+				取消
+			</view>
+		</view>
+		<view class="z-search__placeholder" aria-hidden>
+			<view class="z-search__placeholder-bar">{{placeholder}}</view>
+			<view class="z-search__placeholder-cancel">取消</view>
+		</view>
+	</view>
+</view>
+

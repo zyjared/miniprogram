@@ -1,0 +1,51 @@
+<view class="navigation-search__wrapper {{scrolled ? 'navigation-search-scrolled' : ''}} {{isIos ? '' : 'android'}}" style="--bg: {{background}}; --color: {{color}}; --bar-padding-right: {{barPaddingRight}}">
+	<navigation-bar
+	 class="navigation-search__nav"
+	 title="{{title}}"
+	 background="{{background}}"
+	 color="{{color}}"
+	 back="{{back}}"
+	 loading="{{loading}}"
+	 homeButton="{{homeButton}}"
+	 animated="{{animated}}"
+	 show="{{show}}"
+	 delta="{{delta}}"
+	/>
+	<view class="navigation-search">
+		<view class="navigation-search__bar" mut-bind:tap="handleScrolled">
+
+			<view class="navigation-search__tip">
+				<zicon icon="search" size="{{22}}" useBg />
+			</view>
+
+			<view class="navigation-search__input-bg" aria-hidden />
+
+			<view class="navigation-search__input-wrapper">
+				<input
+				 class="navigation-search__input"
+				 type="text"
+				 model:value="{{value}}"
+				 placeholder="{{placeholder}}"
+				 focus="{{scrolled}}"
+				 confirm-type="search"
+				 bindfocus="handleScrolled"
+				 bindconfirm="onConfirm"
+				 bindinput="onInput"
+				 hold-keyboard="{{true}}"
+				 worklet:onkeyboardheightchange="handleKeyboardHeightChange"
+				/>
+				<view class="navigation-search__cancel-wrapper" mut-bind:tap="handleScrolled">
+
+					<view mut-bind:tap="handleSearchClear" class="navigation-search__clear" style="{{clearStyle}};">
+						<zicon icon="close" size="{{16}}" useBg />
+					</view>
+					<view class="navigation-search__cancel" mut-bind:tap="onCancel">
+						取消
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+</view>
+

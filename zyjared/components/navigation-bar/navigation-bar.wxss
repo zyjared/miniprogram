@@ -1,0 +1,69 @@
+.navigation-bar {
+    --FG-0: rgba(0, 0, 0, .9);
+    --height: 44px;
+    --left: 16px;
+}
+
+.navigation-bar .android {
+    --height: 48px;
+}
+
+.navigation-bar {
+    overflow: hidden;
+    color: var(--FG-0);
+    flex: none;
+}
+
+.navigation-bar__inner {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: calc(var(--height) + env(safe-area-inset-top));
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: env(safe-area-inset-top);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navigation-bar__left {
+    position: relative;
+    padding-left: var(--left);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.navigation-bar__btn_goback_wrapper,
+.navigation-bar__btn_home_wrapper {
+    height: var(--height);
+    width: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.navigation-bar__btn_goback_wrapper.active {
+    opacity: 0.5;
+}
+
+.navigation-bar__center {
+    font-size: 17px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex: 1;
+    height: 100%;
+}
+
+.navigation-bar__loading {
+    margin-right: 4px;
+    align-items: center;
+}

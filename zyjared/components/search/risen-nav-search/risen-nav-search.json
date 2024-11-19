@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "navigation-bar": "/components/navigation-bar/navigation-bar",
+    "risen": "/components/search/risen/risen",
+    "search": "/components/search/search"
+  }
+}

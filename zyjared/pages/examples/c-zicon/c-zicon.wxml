@@ -1,0 +1,58 @@
+<navigation-bar title="示例 - ZIcon 组件" />
+<scroll-view
+ type="custom"
+ scroll-y
+ class="icon-scroller"
+ bounces="{{false}}"
+>
+	<sticky-header>
+		<view class="settings">
+			<view class="settings__item">
+				<view>
+					图标尺寸
+				</view>
+				<slider
+				 min="10"
+				 max="42"
+				 step="1"
+				 model:value="{{size}}"
+				 show-value
+				/>
+			</view>
+
+			<view class="settings__item">
+				<view>
+					图标颜色
+				</view>
+				<view class="colors">
+					<view
+					 wx:for="{{colors}}"
+					 wx:key="index"
+					 bind:tap="selectColor"
+					 data-color="{{item}}"
+					 class="color {{color === item ? 'color__active' : ''}}"
+					>
+
+						<view class="color__bar" style="background-color: {{item}};" />
+
+					</view>
+				</view>
+			</view>
+		</view>
+	</sticky-header>
+	<view class="icons">
+		<view class="description">以下图标在该小程序中使用。</view>
+		<view wx:for="{{icons}}" wx:key="index" class="icon">
+			<view class="icon__image">
+				<zicon
+				 icon="{{item}}"
+				 size="{{size}}"
+				 color="{{color}}"
+				 useBg
+				/>
+			</view>
+			<text class="icon__title">{{item}}</text>
+		</view>
+	</view>
+</scroll-view>
+

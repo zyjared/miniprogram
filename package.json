@@ -1,0 +1,18 @@
+{
+  "name": "zyjared",
+  "version": "1.0.0",
+  "description": "zyjared的微信小程序, 测试一些组件和 api, 展示相关示例和一些组件。",
+  "scripts": {},
+  "keywords": [
+    "微信小程序",
+    "小程序"
+  ],
+  "author": "zyjared",
+  "license": "MIT",
+  "dependencies": {
+    "zyjared": "file:"
+  },
+  "devDependencies": {
+    "miniprogram-api-typings": "4.0.2"
+  }
+}

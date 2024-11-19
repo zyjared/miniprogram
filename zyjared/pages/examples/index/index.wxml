@@ -1,0 +1,31 @@
+<navigation-bar title="示例" back="{{false}}" />
+<search model:value="{{searchValue}}" bindinput="handleSearch" />
+<scroll-view type="custom" scroll-y class="scroller">
+	<block wx:if="{{examples.length === 0}}">
+		<view class="examples__empty">
+			<text>未找到匹配的示例</text>
+		</view>
+	</block>
+	<list-view>
+		<view
+		 wx:for="{{examples}}"
+		 wx:key="id"
+		 class="examples__item"
+		 bindtap="navigateTo"
+		 data-url="{{item.url}}"
+		>
+			<view class="examples__item__icon" style="background-color: {{item.color}};" />
+			<view class="examples__item__content">
+				<text class="examples__item__title">{{item.title}}</text>
+				<zicon
+				 icon="arrow-forward"
+				 size="{{16}}"
+				 color="#ccc"
+				 useBg
+				/>
+			</view>
+		</view>
+	</list-view>
+	<view class="safe-area-bottom" aria-hidden />
+</scroll-view>
+

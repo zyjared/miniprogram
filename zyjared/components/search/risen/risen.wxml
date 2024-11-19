@@ -1,0 +1,4 @@
+<view class="_risen">
+	<slot name="default" />
+</view>
+

@@ -1,0 +1,5 @@
+<view wx:if="{{resource}}" class="icon-wrapper" style='--icon:url("{{resource}}"); width: {{size}}px; height: {{size}}px;'>
+	<view wx:if="{{!useBg}}" class="icon-mask" style='{{color ? "background-color: " + color : ""}};' />
+	<view wx:else class="icon-bg" />
+</view>
+

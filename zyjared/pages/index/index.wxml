@@ -1,0 +1,67 @@
+<scroll-view
+ type="custom"
+ class="scroller {{isIos ? 'android' : ''}} {{scrolled ? 'scrolled' : ''}}"
+ scroll-into-view="{{scrollIntoView}}"
+ bindscroll="bindScroll"
+ style="--bg: {{bgColor}}; --fg:{{fgColor}}"
+ show-scrollbar="{{false}}"
+ enhanced
+ scroll-y
+ scroll-with-animation
+>
+	<sticky-section push-pinned-header="{{false}}">
+		<view class="placeholder" id="placeholder" aria-hidden></view>
+		<sticky-header>
+			<view class="header">
+				<view class="avatar">
+					<cover-image wx:if="{{!userAvatarText}}" src="{{user.avatar}}" bind:error="bindUserAvatarError" />
+					<view wx:else>
+						<text>{{userAvatarText}}</text>
+					</view>
+				</view>
+				<view class="info">
+					<text class="name">{{ user.name }}</text>
+					<text class="ip">IP 属地：{{ user.ip }}</text>
+				</view>
+			</view>
+		</sticky-header>
+		<view class="detail">
+			<view class="socials">
+				<view
+				 class="social-icon"
+				 wx:for="{{user.socials}}"
+				 wx:key="id"
+				 bindtap="copyText"
+				 data-text="{{item.url}}"
+				>
+					<zicon
+					 icon="{{item.icon}}"
+					 size="{{32}}"
+					 color="{{fgColor}}"
+					 useBg
+					/>
+				</view>
+			</view>
+			<text class="description">{{ user.description }}</text>
+		</view>
+	</sticky-section>
+	<sticky-section push-pinned-header="{{false}}">
+		<sticky-header>
+			<view class="title" id="main-header" />
+		</sticky-header>
+		<scroll-view
+		 class="main"
+		 id="main"
+		 type="list"
+		 scroll-y="{{scrolled}}"
+		 bindscroll="bindMainScroll"
+		>
+			<view class="posts">
+				<text>
+				暂无数据
+                </text>
+			</view>
+		</scroll-view>
+	</sticky-section>
+</scroll-view>
+
